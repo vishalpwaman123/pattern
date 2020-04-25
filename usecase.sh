@@ -1,12 +1,9 @@
-#!/usr/local/bin/bash -x
-echo "Enter Word Ending With thing"
-read word
-
-pat="^[A-Za-z~!@#$%^&*()]{1}[4]{1}[0-9]{5}$"
-
-if [[ $word =~ $pat ]];
-then
-	echo yes;
+#!/bin/bash -x
+read -p "Enter the postal Index Number :" pin;
+pattern="^[4]{1}[0-9]{5}[A-Za-z~!@#$%^&*()_]{1}$"
+if [[ $pin =~ $pattern ]]
+then 
+	echo "valid";
 else
-	echo no;
-fi 
+	echo "Not Valid";
+fi
