@@ -1,7 +1,7 @@
 #!/bin/bash -x
 read -p "Enter the postal Index Number :" pin;
-pattern="^[4]{1}[0-9]{5}[A-Za-z~!@#$%^&*()_]{1}$"
-if [[ $pin =~ $pattern ]]
+pattern1="^[4]{1}[0-9]{2}\s?[0-9]{3}$"
+if [[ $pin =~ $pattern1 ]]
 then 
 	echo "valid";
 else
